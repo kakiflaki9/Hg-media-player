@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hg+ Media Player - Ethereal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.cursors-4u.net/cursors/animated/cute-pink-flower-b87393a7-32.css">
+</head>
+<body>
+    <div class="player-container">
+        <header class="player-header">
+            <h1>✨ Hg+ Media Player ✨</h1>
+            <p class="theme-label">ethereal</p>
+        </header>
+        <div class="album-display">
+            <img id="albumArt" src="images/album-art/album1.png" alt="Album Art" class="album-art">
+        </div>
+        <div class="now-playing">
+            <h2 id="songTitle">Now Playing</h2>
+            <p id="artistName">Ethereal Vibes</p>
+        </div>
+        <div class="controls">
+            <button class="btn-control" id="prevBtn">⏮️ Prev</button>
+            <button class="btn-control btn-play" id="playBtn">▶️ Play</button>
+            <button class="btn-control" id="nextBtn">Next ⏭️</button>
+        </div>
+        <div class="volume-control">
+            <label for="volumeSlider">Volume:</label>
+            <input type="range" id="volumeSlider" min="0" max="100" value="70">
+            <span id="volumeValue">70%</span>
+        </div>
+        <footer class="player-footer">
+            <p>Made with 🖤 on a Raspberry Pi cyberdeck</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
