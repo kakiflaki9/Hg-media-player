@@ -1,0 +1,135 @@
+:root {
+    --primary-color: #ffd6f3;
+    --secondary-color: #c77dff;
+    --accent-color: #e0aaff;
+    --dark-bg: #0a0a0a;
+    --card-bg: #1a1a2e;
+    --text-light: #f0f0f0;
+    --border-color: #c77dff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('https://cdn.cursors-4u.net/cursors/animated/cute-pink-flower-b87393a7.cur'), auto;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 50%, #0a0a0a 100%);
+    color: var(--text-light);
+    font-family: 'Courier New', monospace;
+    min-height: 100vh;
+}
+
+.player-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    background: var(--card-bg);
+    border: 3px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(199, 125, 255, 0.3);
+    animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 30px rgba(199, 125, 255, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(199, 125, 255, 0.5); }
+}
+
+.player-header h1 {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(199, 125, 255, 0.5);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.theme-label {
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.album-display {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.album-art {
+    width: 250px;
+    height: 250px;
+    border: 3px solid var(--primary-color);
+    border-radius: 10px;
+    animation: float 3s ease-in-out infinite;
+    object-fit: cover;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.now-playing {
+    background: rgba(199, 125, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.now-playing h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.now-playing p {
+    color: var(--accent-color);
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.btn-control {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    border: 2px solid var(--primary-color);
+    color: var(--dark-bg);
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-control:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255, 214, 243, 0.6);
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.volume-control label {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.volume-control input {
+    flex: 1;
+    cursor: pointer;
+}
+
+.player-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #b0b0b0;
+    font-size: 0.9em;
+}
