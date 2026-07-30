@@ -10,7 +10,7 @@ import os
 app = Flask(__name__, 
             template_folder='themes',
             static_folder='themes/ethereal',
-            static_url_path='')
+            static_url_path='/')
 
 THEMES_DIR = os.path.join(os.path.dirname(__file__), 'themes')
 CURRENT_THEME = 'ethereal'
