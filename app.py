@@ -7,7 +7,10 @@ A retro cyberdeck media player with customizable themes
 from flask import Flask, render_template, jsonify
 import os
 
-app = Flask(__name__, template_folder='themes')
+app = Flask(__name__, 
+            template_folder='themes',
+            static_folder='themes/ethereal',
+            static_url_path='')
 
 THEMES_DIR = os.path.join(os.path.dirname(__file__), 'themes')
 CURRENT_THEME = 'ethereal'
@@ -20,7 +23,7 @@ def index():
 def get_themes():
     themes = []
     if os.path.exists(THEMES_DIR):
-        themes = [d for d in os.listdir(THEMES_DIR) 
+        themes = [d for d in os.listdir(THEMES_DIR)
                  if os.path.isdir(os.path.join(THEMES_DIR, d))]
     return jsonify({'themes': themes})
 
